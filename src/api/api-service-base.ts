@@ -13,7 +13,7 @@ export abstract class APIServiceBase {
   protected readonly axiosInstance: AxiosInstance;
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: "",
+      baseURL: import.meta.env.VITE_API_BASE_URL??"",
     });
 
     this.axiosInstance.interceptors.request.use(

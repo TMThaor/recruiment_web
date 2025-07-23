@@ -85,7 +85,7 @@ const Dashboard = () => {
     <Layout>
       <div className="p-6">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Recruitment Dashboard</h1>
+          <h1 className="text-3xl font-bold">Bảng điều khiển</h1>
           <div className="flex gap-2">
             {["7d", "30d", "90d"].map((range) => (
               <Button
@@ -94,7 +94,7 @@ const Dashboard = () => {
                 size="sm"
                 onClick={() => setTimeRange(range as any)}
               >
-                Last {range}
+                {range} gần nhất
               </Button>
             ))}
           </div>
@@ -104,20 +104,20 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           <Card>
             <CardHeader className="pb-2">
-              <CardDescription>Total Applicants</CardDescription>
-              <CardTitle className="text-3xl">845</CardTitle>
+              <CardDescription>Số lượng ứng viên</CardDescription>
+              <CardTitle className="text-3xl">128</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-xs text-muted-foreground">
                 <span className="text-green-500 font-medium mr-1">↑ 15%</span>{" "}
-                vs last period
+                so với cùng kỳ
               </p>
             </CardContent>
           </Card>
-          <Card>
+          {/* <Card>
             <CardHeader className="pb-2">
-              <CardDescription>Website Visits</CardDescription>
-              <CardTitle className="text-3xl">21,345</CardTitle>
+              <CardDescription>Lượt truy cập website</CardDescription>
+              <CardTitle className="text-3xl"></CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-xs text-muted-foreground">
@@ -125,10 +125,10 @@ const Dashboard = () => {
                 vs last period
               </p>
             </CardContent>
-          </Card>
+          </Card> */}
           <Card>
             <CardHeader className="pb-2">
-              <CardDescription>Job Posts</CardDescription>
+              <CardDescription>Tin tuyển dụng</CardDescription>
               <CardTitle className="text-3xl">58</CardTitle>
             </CardHeader>
             <CardContent>
